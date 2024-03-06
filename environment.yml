@@ -1,4 +1,4 @@
-name: base
+name: vilota-1
 channels:
   - pytorch
   - defaults

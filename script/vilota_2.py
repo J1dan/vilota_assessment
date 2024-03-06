@@ -41,8 +41,6 @@ def create_bounding_box_wireframe(center, extents, rotations):
 
     # Translate to center
     bounding_box_translated = bounding_box_rotated_xyz + center
-    print(bounding_box_rotated_xyz)
-    print(center)
 
     # Define line segments for the wireframe
     lines = [
@@ -64,9 +62,7 @@ def animate_bounding_box_motion(visualizer):
     center = np.array([0.0, 0.0, 0.0])
     extents = np.array([1, 1, 1])
     rotations = np.array([0.0, 0.0, 0.0])
-    # Set initial view parameters
-    # view_control = visualizer.get_view_control()
-    # view_control.set_constant_z_far(1000)
+
     # Animate bounding box motion
     for i in range(360):
         print(i)
@@ -86,7 +82,7 @@ def animate_bounding_box_motion(visualizer):
         view_ctl.camera_local_translate(forward=-2, right=0, up=0)
         visualizer.poll_events()
         visualizer.update_renderer()
-        # vis.remove_geometry(line_set)
+        vis.remove_geometry(line_set)
 
 # Create a visualization object and window
 vis = o3d.visualization.Visualizer()
