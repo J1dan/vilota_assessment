@@ -43,7 +43,7 @@ def apply_distortion(distortion_model, params, image):
     return distorted_image
 
 # Load the input photo
-input_photo = cv2.imread("input_image.jpg")
+input_photo = cv2.imread("figs/input_image.jpg")
 # print(type(input_photo))
 # cv2.imshow('...', input_photo)
 params_kb4 = [622, 622, 965, 631, -0.256, -0.0015, 0.0007, -0.0002]

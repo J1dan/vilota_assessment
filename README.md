@@ -13,6 +13,8 @@ conda activate vilota-1
 ```
 ## Explanation
 
+### Assessment 1
+
 ### First script
 
 This script visualizes three transformations, the first is pure translation, the second is rotation + translation, the third is the second one incorporated with a translation.
@@ -27,5 +29,11 @@ The gifs first visualize the trajectory of the wireframe, then the fixed view on
 
 <img src="gifs/2.gif" width="400"/>
 
+### Assessment 2
 
+This script applies the transformation of an fisheye camera model to transform a scenery image.
+
+Given an image, first the coordinate is transformed into the camera coordinate using given intrinsic parameters. Then, referring to https://zhuanlan.zhihu.com/p/511284263, the coordinate is distorted using formulas. The result is shown below.
+
+<img src="figs/1.png" width="400"/>
 
