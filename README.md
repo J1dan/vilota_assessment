@@ -35,6 +35,6 @@ This script applies the transformation of an fisheye camera model to transform a
 
 Given an image, first the coordinate is transformed into the camera coordinate using given intrinsic parameters. Then, referring to https://zhuanlan.zhihu.com/p/511284263, the coordinate is distorted using formulas. The result is shown below.
 
-<img src="figs/input_image.png" width="400"/>
+<img src="figs/input_image.jpg" width="400"/>
 <img src="figs/1.png" width="400"/>
 
