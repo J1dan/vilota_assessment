@@ -41,7 +41,7 @@ def apply_distortion(distortion_model, params, image):
             if 0 <= x_distorted < img_width and 0 <= y_distorted < img_height:
                 distorted_image[y_distorted, x_distorted] = image[y, x]
     return distorted_image
-
+print(cv2.__version__)
 # Load the input photo
 input_photo = cv2.imread("figs/input_image.jpg")
 # print(type(input_photo))

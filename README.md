@@ -38,3 +38,36 @@ Given an image, first the coordinate is transformed into the camera coordinate u
 <img src="figs/input_image.jpg" width="400"/>
 <img src="figs/1.png" width="400"/>
 
+### Assessment 3
+
+Environment Setup:
+
+The steps to configure OICC are followed. I had OpenCV version > 4.5.0 installed already, so the first step is skipped. For Ceres-solver, I had different version, so it was reinstalled. requiring a corresponding eigen library, for which I also reinstalled eigen.
+
+However, when compiling the OICC, it indicated that there were some functions not defined in OpenCV. I suspected it was because the version I used have some changes that cause the issue. So OpenCV needs to be reinstalled.
+
+When compiling OpenCV, I faced some issues. I solved them by
+
+1. Added flag to the command to use C++14 for compiling (Initially it used C++11 that caused an issue)
+
+2. Added flag to let tiff be built to avoid the miscorrespondance of tiff version
+
+3. conda deactivate to avoid unabling to find some libraries.
+
+The command I used to configure is 
+```
+cmake -DOPENCV_EXTRA_MODULES_PATH=../opencv_contrib-4.5.0/modules       -DOPENCV_ENABLE_NONFREE=ON       -DCMAKE_CXX_STANDARD=14       ../opencv-4.5.0       -D BUILD_TIFF=ON
+```
+
+OICC was successfully compiled after these were done.
+
+After calibration, the results are illustrated below.
+
+Camera intrinsic values: 
+<img src="figs/intrinsic.png" width="400"/>
+
+IMU to camera transformation:
+<img src="figs/t_itoc.png" width="400"/>
+
+IMU to camera time offset:
+<img src="figs/imu_t.png" width="400"/>
