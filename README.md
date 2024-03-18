@@ -9,7 +9,7 @@ Recommended to use conda:
 conda env create -f environment.yml
 ```
 ```
-conda activate vilota-1
+conda activate vilota_1
 ```
 ## Explanation
 
